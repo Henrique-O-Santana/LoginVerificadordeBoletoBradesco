@@ -96,7 +96,7 @@
             <Component class="javax.swing.JLabel" name="jLabel6">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\12525131773\Documents\NetBeansProjects\GeradorBoletoBradesco\src\icon\BBD.D (1).png"/>
+                  <Image iconType="3" name="/icon/BBD.D (1).png"/>
                 </Property>
               </Properties>
             </Component>
@@ -116,15 +116,15 @@
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabelJaTem" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="jButton2" min="-2" pref="130" max="-2" attributes="0"/>
+                              <Component id="jButtonLoginArea" min="-2" pref="130" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelNome" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabelCpf" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="PasswordKey" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="jPasswordField2" alignment="0" pref="290" max="32767" attributes="0"/>
-                          <Component id="jButton3" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="jButtonCadastrar" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                           <Component id="CompleteName" alignment="0" max="32767" attributes="0"/>
                           <Component id="cpfRegister" alignment="0" max="32767" attributes="0"/>
                       </Group>
@@ -132,7 +132,7 @@
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelTitulo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="122" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -141,13 +141,13 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelTitulo" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                      <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelNome" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="CompleteName" min="-2" pref="30" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabelCpf" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="cpfRegister" min="-2" pref="30" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -155,11 +155,11 @@
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jPasswordField2" min="-2" pref="30" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="jButton3" min="-2" pref="35" max="-2" attributes="0"/>
+                      <Component id="jButtonCadastrar" min="-2" pref="35" max="-2" attributes="0"/>
                       <EmptySpace pref="22" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton2" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                          <Component id="jLabelJaTem" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="jButtonLoginArea" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                   </Group>
@@ -167,7 +167,7 @@
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JLabel" name="jLabel1">
+            <Component class="javax.swing.JLabel" name="jLabelTitulo">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Segoe UI" size="18" style="0"/>
@@ -175,14 +175,14 @@
                 <Property name="text" type="java.lang.String" value="CADASTRAR"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel2">
+            <Component class="javax.swing.JLabel" name="jLabelNome">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Nome Completo:"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="CompleteName">
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel3">
+            <Component class="javax.swing.JLabel" name="jLabelCpf">
               <Properties>
                 <Property name="text" type="java.lang.String" value="CPF:"/>
               </Properties>
@@ -192,17 +192,17 @@
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cpfRegisterActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel4">
+            <Component class="javax.swing.JLabel" name="jLabelJaTem">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Voc&#xea; tem conta?"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton2">
+            <Component class="javax.swing.JButton" name="jButtonLoginArea">
               <Properties>
                 <Property name="text" type="java.lang.String" value="&#xc1;REA DE LOGIN"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonLoginAreaActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="PasswordKey">
@@ -211,8 +211,11 @@
               </Properties>
             </Component>
             <Component class="javax.swing.JPasswordField" name="jPasswordField2">
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jPasswordField2ActionPerformed"/>
+              </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="jButton3">
+            <Component class="javax.swing.JButton" name="jButtonCadastrar">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="2f" green="9" red="cc" type="rgb"/>
@@ -223,7 +226,7 @@
                 <Property name="text" type="java.lang.String" value="CADASTRAR"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonCadastrarActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>

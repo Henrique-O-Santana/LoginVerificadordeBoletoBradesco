@@ -9,6 +9,8 @@ public class BoletoDAO {
     public BoletoDAO(Connection conn) {
         this.conn = conn;
     }
+    
+    
 
     public Optional<Boleto> buscarPorCodigo(String codigo) {
         String sql = "SELECT * FROM boletos WHERE codigo = ?";
@@ -34,4 +36,6 @@ public class BoletoDAO {
 
         return Optional.empty();
     }
+    
+    
 }

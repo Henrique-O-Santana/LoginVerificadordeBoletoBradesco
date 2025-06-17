@@ -1,5 +1,9 @@
 package geradorboletobradesco;
 
+import java.awt.List;
+import java.sql.*;
+import java.util.ArrayList;
+
 public class Boleto {
     protected String codigo;
     protected String banco;
@@ -14,7 +18,8 @@ public class Boleto {
         this.beneficiario = beneficiario;
         this.status = status;
     }
-
+    
+    
     public String getCodigo() {
         return codigo; }
     

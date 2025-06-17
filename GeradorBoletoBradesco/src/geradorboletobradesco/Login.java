@@ -1,4 +1,8 @@
 package geradorboletobradesco;
+
+import java.util.Base64;
+import javax.swing.JOptionPane;
+
 public class Login extends javax.swing.JFrame {
 
     public Login() {
@@ -13,14 +17,14 @@ public class Login extends javax.swing.JFrame {
         ImageBar = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelTitulo = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         cpfRegister = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         PasswordKey = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        jButtonEntrar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        jButtonCadastrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Login | Bradesco");
@@ -32,7 +36,7 @@ public class Login extends javax.swing.JFrame {
 
         ImageBar.setBackground(new java.awt.Color(204, 9, 47));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\12525131773\\Documents\\NetBeansProjects\\GeradorBoletoBradesco\\src\\icon\\BBD.D (1).png")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/BBD.D (1).png"))); // NOI18N
 
         javax.swing.GroupLayout ImageBarLayout = new javax.swing.GroupLayout(ImageBar);
         ImageBar.setLayout(ImageBarLayout);
@@ -54,10 +58,10 @@ public class Login extends javax.swing.JFrame {
         jPanel1.add(ImageBar);
         ImageBar.setBounds(0, 0, 250, 450);
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel1.setText("ENTRAR");
+        jLabelTitulo.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabelTitulo.setText("ENTRAR");
 
-        jLabel2.setText("Insira seu E-mail ou CPF:");
+        jLabel2.setText("Insira seu CPF:");
 
         cpfRegister.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -67,21 +71,21 @@ public class Login extends javax.swing.JFrame {
 
         jLabel3.setText("Insira a senha:");
 
-        jButton1.setBackground(new java.awt.Color(204, 9, 47));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("ENTRAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonEntrar.setBackground(new java.awt.Color(204, 9, 47));
+        jButtonEntrar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonEntrar.setText("ENTRAR");
+        jButtonEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonEntrarActionPerformed(evt);
             }
         });
 
         jLabel4.setText("Não tem conta?");
 
-        jButton2.setText("CADASTRAR");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButtonCadastrar.setText("CADASTRAR");
+        jButtonCadastrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButtonCadastrarActionPerformed(evt);
             }
         });
 
@@ -93,27 +97,27 @@ public class Login extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(136, 136, 136)
-                        .addComponent(jLabel1))
+                        .addComponent(jLabelTitulo))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(23, 23, 23)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel4)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jButtonCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jLabel2)
                                 .addComponent(jLabel3)
                                 .addComponent(PasswordKey, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
                                 .addComponent(cpfRegister)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(jButtonEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(37, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(22, 22, 22)
-                .addComponent(jLabel1)
+                .addComponent(jLabelTitulo)
                 .addGap(41, 41, 41)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -123,11 +127,11 @@ public class Login extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(PasswordKey, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 92, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(60, 60, 60))
         );
 
@@ -155,21 +159,32 @@ public class Login extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    
+    // Login
+    private void jButtonEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEntrarActionPerformed
         String cpfR = cpfRegister.getText();
-        System.out.println(cpfR);
-        String passkey = PasswordKey.getText();
-        System.out.println(passkey);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        String passKey = new String(PasswordKey.getPassword());
+        String hashKey = Base64.getEncoder().encodeToString(passKey.getBytes());
+        
+        
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    if (Usuario.Login(cpfR, hashKey)) {
+        JOptionPane.showMessageDialog(this, "Login bem-sucedido!");
+        TelaApp tela = new TelaApp();
+        tela.setVisible(true);
+        this.dispose();
+    } else {
+        JOptionPane.showMessageDialog(this, "Email ou senha incorretos.");
+    }
+    }//GEN-LAST:event_jButtonEntrarActionPerformed
+
+    private void jButtonCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastrarActionPerformed
         SignUp SignUpFrame = new SignUp(); 
         SignUpFrame.setVisible(true);
         SignUpFrame.pack(); 
         SignUpFrame.setLocationRelativeTo(null);
         this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jButtonCadastrarActionPerformed
 
     private void cpfRegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cpfRegisterActionPerformed
 ;
@@ -179,13 +194,13 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPanel ImageBar;
     private javax.swing.JPasswordField PasswordKey;
     private javax.swing.JTextField cpfRegister;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jButtonCadastrar;
+    private javax.swing.JButton jButtonEntrar;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
